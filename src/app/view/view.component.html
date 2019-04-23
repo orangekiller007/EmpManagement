@@ -1,0 +1,97 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<h2>Employee List:</h2>
+<!--<div *ngIf="emp.length>0; else loading">
+  <ul *ngFor="let e of emp">
+<li>{{e.id}} - {{e.employee_name}}</li>
+<li>{{e.employee_salary}}</li>
+
+  </ul>
+  
+  </div>-->
+  
+  <!--<table style="width:100%">
+      <tr>
+          <th>Name</th>
+          <th>Position</th> 
+          <th>Age</th>
+          <th>Joining_Year</th>
+          <th>Address</th>
+
+        </tr>
+  
+    <tr>
+
+  <div *ngIf="emp.length>0; else loading">
+    <ul *ngFor="let e of emp">
+
+  <td>{{e.name}}</td>
+  <td>{{e.position}}</td>
+  <td>{{e.Age}}</td>
+<td>{{e.Joining_Year}}</td>
+<td>{{e.address}}</td>
+
+    
+</ul>
+    
+    </div>
+  </tr>
+</table>
+
+-->
+<!--<table>
+
+    <tr>
+        <th>Name</th>
+        <th>Position</th> 
+        <th>Age</th>
+        <th>Joining_Year</th>
+        <th>Address</th>
+        <th span="6">Actions</th>
+
+      </tr>
+
+  <tr *ngFor="let e of emp">
+
+      <td> {{e.name}}</td>
+      <td>{{e.position}}</td>
+      <td>{{e.age}}</td>
+    <td>{{e.joining_year}}</td>
+    <td>{{e.address}}</td>
+    <td><button (click) = "deleteBusiness(e._id)">Delete</button>
+<button [routerLink]="['edit', e._id]">Edit</button></td>
+  </tr>
+
+</table>-->
+
+
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Age</th>
+            <th>Joining Year</th>
+            <th>Address</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+
+    <tr *ngFor="let e of emp">
+
+        <td> {{e.name}}</td>
+        <td>{{e.position}}</td>
+        <td>{{e.age}}</td>
+      <td>{{e.joining_year}}</td>
+      <td>{{e.address}}</td>
+      <td class="text-center"><button class='btn btn-danger btn-xs' (click) = "deleteBusiness(e._id)"><span class="glyphicon glyphicon-remove"></span>Delete</button>
+        <button class='btn btn-info btn-xs' [routerLink]="['edit', e._id]"><span class="glyphicon glyphicon-edit"></span>Edit</button>
+</td>
+   
+    </table>
+    </div>
+</div>
